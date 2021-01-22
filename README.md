@@ -1,27 +1,26 @@
-Welcome to Glitch
-=================
+# Timestamp Microservice
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Microservice Node script for returning a timestamp. Created for a FreeCodeCamp project
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+## Live Demo
+[https://enormous-sandwich.glitch.me/](https://enormous-sandwich.glitch.me/)
 
-Find out more [about Glitch](https://glitch.com/about).
+## Installation
+```
+$ git clone https://github.com/Oddert/Timestamp-Microservice.git
+$ cd Timestamp-Microservice
+$ npm i
+$ npm start
+```
 
+## Scripts
+| script | command                                        | action
+|--------|------------------------------------------------|------------------------------------------------|
+| start  | node app.js                                    | runs the server                                |
+| server | nodemon app.js                                 | runs the server with auto restart              |
 
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
-
-\ ゜o゜)ノ
+# Routes
+| Route  | Params | Returns
+|--------|-------------|-------------------|
+| /  |  | returns a basic html page to interact with the API                                |
+| /:time | String or Number representing a JS-compatible date | JSON object with unix timestamp and readable date |
